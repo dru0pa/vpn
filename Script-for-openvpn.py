@@ -37,5 +37,6 @@ else:
 
 os.system ('sleep 20') 
 #os.system ('sudo service shorewall restart')
-os.system ('sudo systemctl start shorewall.service')
-
+#os.system ('sudo systemctl start shorewall.service')
+os.system ('sudo shorewall stop')
+os.system ('sudo shorewall start')
