@@ -17,3 +17,9 @@ sudo systemctl enable vpnstart.service
 
 
 This Has NO garenty that it will work in any way or form. Use it is you like if not you chose not mine.
+
+Add these line to your /etc/crontab
+
+* 4 * * * root /etc/openvpn/Kill_OpenVpn.sh
+0,30 * * * * root /etc/openvpn/Script-for-openvpn.py
+
