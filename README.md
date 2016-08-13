@@ -3,6 +3,8 @@
 The VPN will do a connect to the vpn server and will check the connection to the server every 30 minutes.
 Every time it starts up the VPN will do a random pick of one 16 VPN servers to connected to each time it needs to conneced.
 
+This uses pyhton and bash. It just work not great yet still working on fixing some new problem new Rasbian
+
 
 For systemd startup
 Copy the file called vpnstart.service to /etc/systemd/system/ to adding the vpn to systemd startup
