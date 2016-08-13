@@ -5,7 +5,7 @@ After=sshd.service
 [Service]
 Type=dbus
 ExecStart=/etc/openvpn/Startup-Script.sh
-User=pi
+User=root
 Type=forking
 
 [Install]
