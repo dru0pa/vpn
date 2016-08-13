@@ -11,7 +11,9 @@ sudo killall -p openvpn
 
 echo "$(date) Kill all openvpn process" >> /var/log/openvpn-scrit-log
 
-sudo systemctl stop shorewall.service
+#sudo systemctl stop shorewall.service
+
+sudo shorewall stop
 
 sudo rm -rf /home/pi/tmp/openvpn/
 
