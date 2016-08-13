@@ -24,3 +24,6 @@ Add these line to your /etc/crontab
 
 0,30 * * * * root /etc/openvpn/Script-for-openvpn.py
 
+
+Addd this line to openvpn config file for the vpn
+auth-user-pass /etc/openvpn/ipvanish-config.txt
