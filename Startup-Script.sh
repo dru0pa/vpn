@@ -6,8 +6,14 @@
 
 # Writen by Andrew Price dru0pa@gmail.com
 
-sleep 30
-mkdir -p /tmp/openvpn
-sleep 30
+#sleep 30
+
+sudo rm -rf /home/pi/tmp/openvpn/
+
+sudo mkdir -p /home/pi/tmp/openvpn/
+
+sudo chmod -777 /home/pi/tmp/openvpn/ -R
+
+#sleep 30
 echo "$(date) The VPN is Going to connected to server after startup" >> /var/log/openvpn-scrit-log
 python /etc/openvpn/Script-for-openvpn.py

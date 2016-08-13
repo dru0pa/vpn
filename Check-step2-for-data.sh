@@ -5,10 +5,10 @@
 
 # Writen by Andrew Price dru0pa@gmail.com
 
-if [ -s /tmp/openvpn/step3.txt ]
+if [ -s /home/pi/tmp/openvpn/step3.txt ]
 	then
 		echo "File has data."
 	else
 		echo "File has no data."
-		echo "NODATA" > /tmp/openvpn/step3.txt
+		echo "NODATA" > /home/pi/tmp/openvpn/step3.txt
 fi

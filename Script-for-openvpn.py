@@ -10,19 +10,19 @@
 import os
 import mmap
 
-os.system ('sudo chmod -777 tmp/openvpn/ -R')
+os.system ('sudo chmod -777 /home/pi/tmp/openvpn/ -R')
 
 
 print ('Checking for prossess using grep')
-os.system ('sudo ps aux | grep openvpn > /tmp/openvpn/step1.txt')
-os.system ('sudo cat /tmp/openvpn/step1.txt | grep ipvanish> /tmp/openvpn/step2.txt')
-os.system ("sudo grep -v '^$' /tmp/openvpn/step2.txt > /tmp/openvpn/step3.txt")
+os.system ('sudo ps aux | grep openvpn > /home/pi/tmp/openvpn/step1.txt')
+os.system ('sudo cat /home/pi/tmp/openvpn/step1.txt | grep ipvanish> /home/pi/tmp/openvpn/step2.txt')
+os.system ("sudo grep -v '^$' /home/pi/tmp/openvpn/step2.txt > /home/pi/tmp/openvpn/step3.txt")
 
 print ('Looking for openvpn')
 
 os.system ('sudo /etc/openvpn/Check-step2-for-data.sh')
 
-a = open ('/tmp/openvpn/step3.txt')
+a = open ('/home/pi/tmp/openvpn/step3.txt')
 s = mmap.mmap(a.fileno(),0,access=mmap.ACCESS_READ)
 if s.find('ipvanish')!= -1:
 	print 'VPN is Connected'
