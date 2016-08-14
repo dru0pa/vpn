@@ -10,6 +10,7 @@
 import os
 import mmap
 
+os.system ('sudo mkdir -p /home/pi/tmp/openvpn/')
 os.system ('sudo chmod -777 /home/pi/tmp/openvpn/ -R')
 
 
